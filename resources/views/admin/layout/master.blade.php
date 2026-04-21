@@ -78,8 +78,8 @@
             </li>
 
             <li class="nav-item">
-                <form action="" method="post">
-
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
                     <span class="nav-link">
                         <button type="submit" class="btn bg-dark text-white"><i
                                 class="fa-solid fa-right-from-bracket"></i> Logout</button>
