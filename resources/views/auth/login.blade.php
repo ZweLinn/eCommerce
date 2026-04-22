@@ -44,4 +44,11 @@
             </x-primary-button>
         </div>
     </form>
+
+    <div class="mb-3">
+        <a href="{{ url('/auth/google/redirect') }}">Login with Google</a>
+    </div>
+    <div>
+        <a href="{{ url('/auth/github/redirect') }}">Login with Github</a>
+    </div>
 </x-guest-layout>
