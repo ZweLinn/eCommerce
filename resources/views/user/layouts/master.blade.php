@@ -36,6 +36,7 @@
 
 </head>
 
+
 <body>
 
 
@@ -45,7 +46,7 @@
 
         <div class="container px-0">
             <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                <a href="index.html" class="navbar-brand">
+                <a href="{{ url('/user/home') }}" class="navbar-brand">
                     <h1 class="text-primary display-6">Fruitables</h1>
                 </a>
                 <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
