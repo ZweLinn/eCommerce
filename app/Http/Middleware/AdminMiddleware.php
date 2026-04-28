@@ -17,9 +17,17 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         
-        if (Auth::user()->role === 'admin' || Auth::user()->role === 'superadmin') {
+       if(Auth::user()){
+        if (Auth::user()->role === 'superadmin' || Auth::user()->role === 'admin') {
+            if($request->route()->getName() === 'register' || $request->route()->getName() === 'login'){
+                return back()->with('error', 'Only superadmin can access registration page.');
+            }
             return $next($request);
         }
-        return back()->with('error', 'You do not have admin access.');
+        return back();
+       }else{
+        return $next($request);
+        
+       }
     }
 }
